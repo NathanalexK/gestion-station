@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/gestion-station.iml" filepath="$PROJECT_DIR$/.idea/gestion-station.iml" />
+      <module fileurl="file://$PROJECT_DIR$/station-ejb/station-ejb.iml" filepath="$PROJECT_DIR$/station-ejb/station-ejb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/station-ejb/src/station-ejb2.iml" filepath="$PROJECT_DIR$/station-ejb/src/station-ejb2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/station-war/station-war.iml" filepath="$PROJECT_DIR$/station-war/station-war.iml" />
+    </modules>
+  </component>
+</project>
