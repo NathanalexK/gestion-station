@@ -19,8 +19,8 @@ try{
     String[] pourcentage = {};
     String[] colGr = {"idProduitLib"};
     String[] colGrCol = {"idDeviseLib"};
-    //String somDefaut[] = {"qte", "puTotal", "puRevient"};
-    String somDefaut[] = {"qte", "puTotal"};
+    String somDefaut[] = {"qte", "puTotal", "puRevient"};
+//    String somDefaut[] = {"qte", "puTotal"};
     
     PageRechercheGroupe pr = new PageRechercheGroupe(mvt, request, listeCrt, listeInt, 3, colGr, somDefaut, pourcentage, colGr.length , somDefaut.length);
     pr.setUtilisateur((user.UserEJB) session.getValue("u"));
@@ -30,8 +30,10 @@ try{
     int month = calendar.get(Calendar.MONTH) + 1; // January is 0
     int year = calendar.get(Calendar.YEAR);
     if(request.getParameter("daty1") == null || request.getParameter("daty2") == null){
-        apreswhere = " and daty <= '"+utilitaire.Utilitaire.dateDuJour()+"' and daty >= '"+String.format("01/%02d/%04d", month, year)+"'";
+//        apreswhere = " and daty <= '"+utilitaire.Utilitaire.dateDuJour()+"' and daty >= '"+String.format("01/%02d/%04d", month, year)+"'";
     }
+//    pr.creer
+//    pr.creerO
     pr.setAWhere(apreswhere);
     pr.getFormu().getChamp("daty1").setDefaut(String.format("01/%02d/%04d", month, year));
     pr.getFormu().getChamp("daty2").setDefaut(utilitaire.Utilitaire.dateDuJour());
@@ -71,6 +73,7 @@ try{
             pr.getTableau().setColonneLien(somDefaut);%>
         <br>
         <%
+            out.println(pr.getTableauRecap().getHtml());
             out.println(pr.getTableau().getHtml());
             out.println(pr.getBasPage());
         %>

@@ -7,7 +7,7 @@ package vente;
 import caisse.MvtCaisse;
 import constante.ConstanteEtat;
 
-
+import java.util.Map;
 
 
 /**
@@ -28,8 +28,6 @@ public class VenteDetailsCpl extends VenteDetailsLib{
         this.idCaisse = idCaisse;
     }
 
-   
-
     public double getMontant() {
         return montant;
     }
@@ -37,9 +35,6 @@ public class VenteDetailsCpl extends VenteDetailsLib{
     public void setMontant(double montant) {
         this.montant = montant;
     }
-    
-    
-    
 
     public VenteDetailsCpl() {
         this.setNomTable("VENTE_DETAILS_CPL");
@@ -56,5 +51,5 @@ public class VenteDetailsCpl extends VenteDetailsLib{
       
         return mc;
     }
-    
+//    public static Map<String, Object> get
 }

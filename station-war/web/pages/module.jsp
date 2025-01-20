@@ -56,9 +56,11 @@
             <!-- Content -->
             <% try {%>
             <jsp:include page='<%=but%>'/>
-            <% } catch (Exception e) {%>
-            <script language="JavaScript"> alert('<%=e.getMessage().toUpperCase()%>');
-                history.back();</script>
+            <% } catch (Exception e) {
+                e.printStackTrace(response.getWriter());
+            %>
+<%--            <script language="JavaScript"> alert('<%=e.getMessage().toUpperCase()%>');--%>
+<%--                history.back();</script>--%>
                 <%
                     }
                 %>
