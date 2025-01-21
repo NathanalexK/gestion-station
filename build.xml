@@ -1,7 +1,7 @@
 <project name="deploy-ejb-station" default="deploy" basedir="./build-file">
     <property environment="env"/>
 
-    <property name="deploy.dir" value="D:\NATHANALEX\Tools\wildfly-10.0.0.Final\standalone\deployments"/>
+    <property name="deploy.dir" value="/opt/wildfly/standalone/deployments"/>
 
     <property name="station-warname" value="station.war"/>
     <property name="station-jarname" value="station-ejb.jar"/>
@@ -86,6 +86,7 @@
     <target name="compile" depends="init">
         <echo> compilation </echo>	
         <javac srcdir="../station-ejb/src/java" destdir="${build-station-ejb_jar}" nowarn="true" debug="on" deprecation="off" classpathref="classpath" includeantruntime="false" encoding="iso-8859-1">
+        
         </javac>
         <echo> compilation done </echo>	
     </target>

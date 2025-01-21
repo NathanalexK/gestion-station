@@ -134,11 +134,11 @@ public class MvtCaisse extends ClassEtat{
         return daty;
     }
 
-    public void setDaty(Date daty) throws Exception{
+    public void setDaty(Date daty){
         if(this.getMode().compareTo("modif")==0)
         {
             if(daty==null)
-                throw new Exception("Date invalide");
+                throw new RuntimeException("Date invalide");
         }
         this.daty = daty;
     }
